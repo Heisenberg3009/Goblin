@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <title>User Preferences!</title>
+        <style>
+          h1 {text-align: center;}
+          table, th, td {
+            border:1px solid black;
+          }
+          </style>
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <br>
+        <h1><u>Select Preferences</u></h1><br>
+        <table id="devices" class="table">
+            <thead>
+              <tr>
+                <th>Preference</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>Music</td>
+                <td><button class="button" >Yes, Please!</button><div class="aespa"></div>
+                    <button>No!</button>
+                </td>     
+              </tr>
+              <tr>
+                <td>Coffee?</td>
+                <td><button>Yes, Please!</button>
+                    <button>No!</button>
+                </td>     
+              </tr>
+              <tr>
+                <td>Air Conditioning?</td>
+                <td><button>Yes, Please!</button>
+                    <button>No!</button>
+                </td>     
+              </tr>
+            </thead>
+          </table>
+          <script>
+            $('.button').click(function () 
+            {
+                $('.aespa').append('<input name="songname" placeholder="Name of the song:"/>');
+            });
+          </script>
+   </body>
+</html>
