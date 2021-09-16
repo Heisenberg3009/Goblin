@@ -1,0 +1,37 @@
+[
+      {
+        "id": 1,
+        "vehiclename": "Mercedes AMG-GT",
+        "vehicletype": "Luxury Vehicle",
+        "licensenumber": 10001,
+        "insurance": 1
+      },
+      {
+        "id": 2,
+        "vehiclename": "Tesla Cybertruck",
+        "vehicletype": "Utility Vehicle",
+        "licensenumber": 10002,
+        "insurance": 1
+      },
+      {
+        "id": 3,
+        "vehiclename": "Tesla Model S",
+        "vehicletype": "Space Utility Vehicle",
+        "licensenumber": 10003,
+        "insurance": 1
+      },
+      {
+        "id": 4,
+        "vehiclename": "Maruti Suzuki Super Carry",
+        "vehicletype": "Pickup Truck",
+        "licensenumber": 10004,
+        "insurance": 0
+      },
+      {
+        "id": 5,
+        "vehiclename": "Lamborgini Squadra Corse",
+        "vehicletype": "GT Sports Vehicle",
+        "licensenumber": 10005,
+        "insurance": 1
+      }
+]

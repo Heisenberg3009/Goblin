@@ -5,6 +5,8 @@
       "name": "Alex",
       "age": "14",
       "city": "Brisbane",
+      "email":"alex123@gmail.com",
+      "password":"alex123",
       "slotnumber": 4
     },
     {
@@ -12,6 +14,8 @@
       "name": "Eren",
       "age": "20",
       "city": "Madrid",
+      "email":"eren123@gmail.com",
+      "password":"eren123",
       "slotnumber": 3
     },
     {
@@ -19,6 +23,8 @@
       "name": "Carla",
       "age": "20",
       "city": "Barcelona",
+      "email":"carla123@gmail.com",
+      "password":"carla123",
       "slotnumber": 5
     },
     {
@@ -26,12 +32,16 @@
       "name": "Sandra",
       "age": "21",
       "city": "Sevilla",
+      "email":"sandra123@gmail.com",
+      "password":"sandra123",
       "slotnumber": 2
     },
     { "id":5,
       "name": "Veronica",
       "age": "22",
       "city": "Paris",
+      "email":"veronica123@gmail.com",
+      "password":"veronica123",
       "slotnumber": 1
     }
   ]

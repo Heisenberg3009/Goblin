@@ -1,5 +1,7 @@
 //Code for our MQTT connections and brokers!
 const mqtt = require('mqtt');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://Tulsi:chloe143@cluster0.lobgv.mongodb.net/Team_Goblin', {useNewUrlParser: true, useUnifiedTopology: true });
 const express = require('express');
 const bodyParser = require('body-parser');
 
