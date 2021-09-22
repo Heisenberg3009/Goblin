@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://Tulsi:chloe143@cluster0.lobgv.mongodb.net/Team_Goblin', {useNewUrlParser: true, useUnifiedTopology: true });
 //Get collection schema--
 const User = require('./models/usersmodel'); 
+const Vehicle = require('./models/vehiclemodel');
 
 const express = require('express');
 const app = express();
@@ -33,18 +34,45 @@ app.get('/api/users', (req, res) => {
   });
 
 app.post('/api/users', (req, res) => {
-    const {id, name, age, city, slotnumber} = req.body;
+    const {id, name, age, city, email, password, slotnumber} = req.body;
     const newUser = new User({
         id,
         name,
         age,
         city,
+        email,
+        password,
         slotnumber
     });
     newUser.save(err => {
       return err
         ? res.send(err)
         : res.send('successfully added User and Data! Hurray!');
+    });
+  });
+
+
+app.get('/api/vehicles', (req, res) => {
+    Vehicle.find({}, (err, users) => {
+        return err
+        ?res.send(err)
+        :res.send(users);
+    });
+  });
+  
+  app.post('/api/vehicles', (req, res) => {
+    const { userid, vehiclename, vehicletype, licensenumber, insurance} = req.body;
+    const newVehicle = new Vehicle({
+        userid,
+        vehiclename,
+        vehicletype,
+        licensenumber,
+        insurance
+    });
+    newVehicle.save(err => {
+      return err
+        ? res.send(err)
+        : res.send('successfully added Vehicle Data! Hurray!');
     });
   });
 

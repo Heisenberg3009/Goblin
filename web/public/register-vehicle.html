@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register Vehicle!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+      h1 {text-align: center;}
+    </style>
+  </head>
+  <body>
+    <!--Form that takes input-->
+    <div class="container">
+      <div class="container">
+        <div id="navbar"></div>
+    <br><h1><u>Register new Vehicle</u></h1><br>
+      <div class="form-group">
+        <label for="userid">Enter User ID:</label><br>
+        <input type="integer" class="form-control" id="userid"/><br>
+      </div>
+      <div class="form-group">
+        <label for="vehiclename">Enter Vehicle Name:</label><br>
+        <input type="text" class="form-control" id="vehiclename"/><br>
+      </div>
+      <div class="form-group">
+        <label for="vehicletype">Enter Vehicle Type:</label><br>
+        <input type="text" class="form-control" id="vehicletype"/><br>
+      </div>
+      <div class="form-group">
+        <label for="licensenumber">Enter License Number:</label><br>
+        <input type="integer" class="form-control" id="licensenumber"/><br>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="insurance"/>
+        <label for="insurance">Check if you have insurance!</label><br>
+      </div>
+      <br>
+      <button class="btn btn-success" id="add-vehicle">Save</button>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -13,6 +13,7 @@ $.get(`${API_URL}/users`)
         <td>${user.name}</td>
         <td>${user.age}</td>
         <td>${user.city}</td>
+        <td>${user.email}</td>
       </tr>`
     );
   });
@@ -27,13 +28,17 @@ $('#add-user').on('click', function() {
   const name = $('#name').val();
   const age = $('#age').val();
   const city = $('#city').val();
-  const body = {
+  const email = $('#email').val();
+  const password = $('#reenter').val();
+  const body1 = {
     name,
     age,
-    city
+    city,
+    email,
+    password
   };
-//When Save is clicked, POST function gets executed.
-  $.post(`${API_URL}/users`, body)
+//When Save is clicked, POST function gets executed (Users).
+  $.post(`${API_URL}/users`, body1)
   .then(response => {
     location.href = '/userslist';
   })
@@ -42,6 +47,49 @@ $('#add-user').on('click', function() {
   });
 });
 
+//Displaying the Vehicle! (Display Vehicles)
+//GET function will get executed when the URL is requested!
+$.get(`${API_URL}/vehicles`)
+.then(response => {
+  response.forEach(vehicle => {
+    $('#vehicles tbody').append(`
+      <tr>
+        <td>${vehicle.userid}</td>
+        <td>${vehicle.vehiclename}</td>
+        <td>${vehicle.vehicletype}</td>
+        <td>${vehicle.licensenumber}</td>
+        <td>${vehicle.insurance}</td>
+      </tr>`
+    );
+  });
+})
+.catch(error => {
+  console.error(`Error: ${error}`);
+});
+//When Save is clicked, POST function gets executed (Vehicles).
+$('#add-vehicle').on('click', function() {
+  const userid = $('#userid').val();
+  const vehiclename = $('#vehiclename').val();
+  const vehicletype = $('#vehicletype').val();
+  const licensenumber = $('#licensenumber').val();
+  const insurance = $('#insurance').val();
+  const body2 = {
+    userid,
+    vehiclename,
+    vehicletype,
+    licensenumber,
+    insurance
+  };
+$.post(`${API_URL}/vehicles`, body2)
+.then(response => {
+  location.href = '/vehicleslist';
+})
+.catch(error => {
+  console.error(`Error: ${error}`);
+  });
+});
+
+//Seperate block of code for sending manual commands!
 $('#sendcommand').on('click', function() {
   const userID = $('#userID').val();
   const command = $('#command').val();
