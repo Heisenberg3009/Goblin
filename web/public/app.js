@@ -1,5 +1,6 @@
 const API_URL = 'http://localhost:5000/api';
 const MQTT_URL = 'http://localhost:5001/sendcommand';
+import Sign_In from './functions';
 
 $('#navbar').load('navbar.html');
 
@@ -87,6 +88,11 @@ $.post(`${API_URL}/vehicles`, body2)
 .catch(error => {
   console.error(`Error: ${error}`);
   });
+});
+
+//When LOGIN is clicked, POST function gets executed (Vehicles).
+$('#check-login').on('click', function() {
+ Sign_In;
 });
 
 //Seperate block of code for sending manual commands!

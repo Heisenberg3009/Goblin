@@ -10,7 +10,7 @@ const Vehicle = require('./models/vehiclemodel');
 const express = require('express');
 const app = express();
 
-const bodyParser = require('body-parser');
+const bodyParser = requirqe('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(function(req, res, next) {
@@ -41,8 +41,7 @@ app.post('/api/users', (req, res) => {
         age,
         city,
         email,
-        password,
-        slotnumber
+        password
     });
     newUser.save(err => {
       return err
@@ -76,6 +75,15 @@ app.get('/api/vehicles', (req, res) => {
     });
   });
 
+  
+  app.get('/api/login', (req, res) => {
+      User.find({}, (err, users) => {
+          return err
+          ?res.send(err)
+          :res.send(users);
+      });
+    });
+  
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });

@@ -10,6 +10,14 @@ app.use(express.static('public'));
     res.sendFile(`${base}/login.html`);
   });
 
+  app.get('/login', (req, res) => {
+    res.sendFile(`${base}/login.html`);
+  });
+
+  app.get('/dashboard', (req, res) => {
+    res.sendFile(`${base}/dashboard.html`);
+  });
+
   app.get('/registeruser', (req, res) => {
     res.sendFile(`${base}/register-user.html`);
   });
