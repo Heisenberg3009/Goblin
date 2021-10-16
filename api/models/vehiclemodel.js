@@ -7,4 +7,4 @@ module.exports = mongoose.model('Vehicles', new mongoose.Schema({
   licensenumber: Number,
   insurance: Boolean,
   userid: Number
-}, { collection : 'Vehicles' }));
+}, { collection : 'Vehicles2' }));

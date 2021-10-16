@@ -4,5 +4,8 @@ const mongoose = require('mongoose');
 module.exports = mongoose.model('Warehouse', new mongoose.Schema({
   warespaceid: Number,
   stockingid: Number,
-  location: Array
+  location: {
+    lat: Number, 
+    lon: Number
+  }
 }, { collection : 'Warehouse' }));

@@ -34,6 +34,18 @@ app.use(express.static('public'));
     res.sendFile(`${base}/vehicles-list.html`);
   });
 
+  app.get('/parking', (req, res) => {
+    res.sendFile(`${base}/parking.html`);
+  });
+
+  app.get('/warehouse', (req, res) => {
+    res.sendFile(`${base}/warehouse.html`);
+  });
+
+  app.get('/phistory', (req, res) => {
+    res.sendFile(`${base}/phistory.html`);
+  });
+
   app.get('/lighting', (req, res) => {
     res.sendFile(`${base}/lighting.html`);
   });

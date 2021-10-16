@@ -34,11 +34,21 @@ client.on('message', (topic, message) => {
     }
   });
 
-app.post('/sendcommand', (req, res) => {
+//post function to send manual commands 
+app.post('/mqtt/sendcommand', (req, res) => {
     const { userID, command }  = req.body;
     const topic = `/userid/${userID}`;
     client.publish(topic, command, () => {
       res.send('published new message');
+    });
+  });
+
+//post function that executes user preferences
+app.post('/mqtt/userpreferences', (req, res) => {
+    const {userID, song}  = req.body;
+    const topic = `/userid/${userID}`;
+    client.publish(topic,"Lights turned on & Coffee machine on. Music playing [Song Title]: " + song, () => {
+      res.send('Lights turned on & Music Playing!');
     });
   });
 

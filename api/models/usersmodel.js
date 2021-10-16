@@ -6,7 +6,11 @@ module.exports = mongoose.model('Users', new mongoose.Schema({
   name: String,
   age: String,
   city: String,
+  phone: String,
+  occupation: String,
+  song: String,
   email:String,
   password: String,
+  visitid: String,
   slotnumber: Number
-}, { collection : 'Users' }));
+}, { collection : 'Users2' }));

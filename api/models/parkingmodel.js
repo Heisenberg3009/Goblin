@@ -6,5 +6,8 @@ module.exports = mongoose.model('Parking', new mongoose.Schema({
   slotnumber: Number,
   //takes the id of the vehicle parked
   id: Number,
-  location: Array
-}, { collection : 'Parking' }));
+  location: {
+    lat: Number, 
+    lon: Number
+  }
+}, { collection : 'Parking2' }));

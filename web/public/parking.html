@@ -1,43 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dashboard</title>
+    <title>Parking Space Status</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <style>
-      h1 {text-align: left;}
-      div {text-align: left;}
+      h1 {text-align: center;}
+      div {text-align: center;}
     </style>
   </head>
   <body>
     <div class="container">
         <div id="navbar"></div>
-    <br><h1><u>User Dashboard</u></h1><br>
-    <table id="dashboardusers" class="table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>City</th>
-                <th>Phone Number</th>
-                <th>Occupation</th>
-                <th>Email</th>
-                <th>ID</th>
-                <th>Slot Number</th>
-              </tr>
-            </thead>
-          <tbody></tbody>
-        </table>
-    <table id="dashboardvehicles" class="table">
-          <thead>
-            <tr>
-              <th>Vehicle ID(s)</th>
-              <th>Vehicle Name(s)</th>
-              <th>Vehicle Type(s)</th>
-              <th>Vehicle License Number(s)</th>
-            </tr>
-          </thead>
-        <tbody></tbody>
+    <br><h1><u>Parking Spot Status</u></h1><br>
+    <table id="parking" class="table">
+        <thead>
+          <tr>
+            <th>Slot Number</th>
+            <th>ID Number</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Parking Status</th>
+          </tr>
+        </thead>
+      <tbody></tbody>
       </table>
+      <br>
       <p id="demo"></p>
     </div>
     <script>

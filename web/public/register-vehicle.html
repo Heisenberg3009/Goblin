@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Register Vehicle!</title>
+    <title>Register Vehicle</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <style>
       h1 {text-align: center;}
@@ -29,10 +29,16 @@
         <label for="licensenumber">Enter License Number:</label><br>
         <input type="integer" class="form-control" id="licensenumber"/><br>
       </div>
+      <div class="form-group">
+        <label for="insurance">Enter 1 if you have insurance (0 if you don't):</label><br>
+        <input type="integer" class="form-control" id="insurance"/><br>
+      </div>
+      <!--
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="insurance"/>
         <label for="insurance">Check if you have insurance!</label><br>
       </div>
+       -->
       <br>
       <button class="btn btn-success" id="add-vehicle">Save</button>    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

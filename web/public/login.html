@@ -8,6 +8,9 @@
     </style>
   </head>
   <body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
     <div class="container">
       <div class="container">
         <div id="navbar"></div>
@@ -15,17 +18,15 @@
           <div id="footer"></div>
     <br><h1><u>Login</u></h1><br>
     <div class="form-group">
-        <label for="name">Enter Email:</label><br>
-        <input type="text" class="form-control" id="name" /><br>
+        <label for="username">Enter Email:</label><br>
+        <input type="email" class="form-control" id="username" /><br>
       </div>
       <div class="form-group">
         <label for="password">Enter Password:</label><br>
-        <input type="password" class="form-control" id="age" /><br>
+        <input type="password" class="form-control" id="password"/><br>
       </div>
       <br>
-      <button class="btn btn-success" id="check-login">Login</button>    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+      <!--onclick="Sign_In()"-->
+      <button id="login" class="btn btn-success" onclick="Sign_In()">Login</button>
   </body>
 </html>

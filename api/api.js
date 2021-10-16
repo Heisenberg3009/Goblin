@@ -6,11 +6,14 @@ mongoose.connect('mongodb+srv://Tulsi:chloe143@cluster0.lobgv.mongodb.net/Team_G
 //Get collection schema--
 const User = require('./models/usersmodel'); 
 const Vehicle = require('./models/vehiclemodel');
+const Parking = require('./models/parkingmodel');
+const Warehouse = require('./models/warehousemodel');
+const PHistory = require('./models/phistorymodel');
 
 const express = require('express');
 const app = express();
 
-const bodyParser = requirqe('body-parser');
+const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(function(req, res, next) {
@@ -21,10 +24,12 @@ app.use(function(req, res, next) {
 
 const port = 5000;
 
+//Test API!
 app.get('/api/test', (req, res) => {
   res.send('The API is working!');
 });
 
+//API to display users!
 app.get('/api/users', (req, res) => {
     User.find({}, (err, users) => {
         return err
@@ -33,8 +38,9 @@ app.get('/api/users', (req, res) => {
     });
   });
 
+//API to save new users!
 app.post('/api/users', (req, res) => {
-    const {id, name, age, city, email, password, slotnumber} = req.body;
+    const {id, name, age, city, email, password} = req.body;
     const newUser = new User({
         id,
         name,
@@ -50,7 +56,7 @@ app.post('/api/users', (req, res) => {
     });
   });
 
-
+//API to display vehicles!
 app.get('/api/vehicles', (req, res) => {
     Vehicle.find({}, (err, users) => {
         return err
@@ -58,15 +64,16 @@ app.get('/api/vehicles', (req, res) => {
         :res.send(users);
     });
   });
-  
-  app.post('/api/vehicles', (req, res) => {
-    const { userid, vehiclename, vehicletype, licensenumber, insurance} = req.body;
+
+//API to save new vehicles!  
+app.post('/api/vehicles', (req, res) => {
+    const {vehiclename, vehicletype, licensenumber, insurance, userid} = req.body;
     const newVehicle = new Vehicle({
-        userid,
         vehiclename,
         vehicletype,
         licensenumber,
-        insurance
+        insurance,
+        userid
     });
     newVehicle.save(err => {
       return err
@@ -75,15 +82,43 @@ app.get('/api/vehicles', (req, res) => {
     });
   });
 
-  
-  app.get('/api/login', (req, res) => {
+/*
+//Login API!
+app.get('/api/login', (req, res) => {
       User.find({}, (err, users) => {
           return err
           ?res.send(err)
           :res.send(users);
       });
     });
+*/
   
+//API for displaying parking slot status!
+app.get('/api/parking', (req, res) => {
+  Parking.find({}, (err, parking) => {
+      return err
+      ?res.send(err)
+      :res.send(parking);
+  });
+});
+
+//API for displaying warespace status!
+app.get('/api/warehouse', (req, res) => {
+  Warehouse.find({}, (err, warespace) => {
+      return err
+      ?res.send(err)
+      :res.send(warespace);
+  });
+});
+
+app.get('/api/phistory', (req, res) => {
+  PHistory.find({}, (err, phistory) => {
+      return err
+      ?res.send(err)
+      :res.send(phistory);
+  });
+});
+
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });

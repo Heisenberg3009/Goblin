@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "visitid":[1,2,3],
+      "vehiclename": ["Mercedes AMG-GT","Ford Figa", "Fiat Spider"],
+      "vehicletype": ["Luxury Vehicle", "Space Utility Vehicle", "Space Utility Vehicle"],
+      "licensenumber": [10001, 10002, 10003],
+      "insurance": [1,0,1]
+    },
+    {
+        "id": 2,
+        "visitid":[4,5,6],
+        "vehiclename": ["Lambhorgini Aventador SVJ","BMW 3 Series", "Porsche Panamera"],
+        "vehicletype": ["Luxury Vehicle", "Luxury Vehicle", "Luxury Vehicle"],
+        "licensenumber": [10004, 10005, 10006],
+        "insurance": [1,1,1]
+      },
+      {
+        "id": 3,
+        "visitid":[7,8,9],
+        "vehiclename": ["Audi A5","Toyota Innova Crysta", "Maruti Suzuki CelerioX"],
+        "vehicletype": ["Luxury Vehicle", "Space Utility Vehicle", "Space Utility Vehicle"],
+        "licensenumber": [10007, 10008, 10009],
+        "insurance": [1,1,1]
+      },
+      {
+        "id": 4,
+        "visitid":[10,11,12],
+        "vehiclename": ["Chevrolet","Maruti Suzuki", "Audi"],
+        "vehicletype": ["Budget", "Space Utility Vehicle", "Luxury Vehicle"],
+        "licensenumber": [10010, 10011, 10012],
+        "insurance": [0,0,1]
+      },
+      {
+        "id": 5,
+        "visitid":[13,14,15],
+        "vehiclename": ["Lambhorgini","Audi", "Maruti Suzuki"],
+        "vehicletype": ["Luxury Vehicle", "Luxury Vehicle", "Space Utility Vehicle"],
+        "licensenumber": [10013, 10014, 10015],
+        "insurance": [1,0,0]
+      }
+]

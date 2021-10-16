@@ -1,10 +1,12 @@
-{
-  "users": [
+[
     {
       "id": 1,
-      "name": "Alex",
+      "visitid": "Alex",
       "age": "14",
       "city": "Brisbane",
+      "phone":"1234567890",
+      "occupation": "Professor",
+      "song": "Blank Space - Taylor Swift",
       "email":"alex123@gmail.com",
       "password":"alex123",
       "slotnumber": 4
@@ -14,6 +16,9 @@
       "name": "Eren",
       "age": "20",
       "city": "Madrid",
+      "phone":"0987654321",
+      "occupation": "Student",
+      "song": "Style - Taylor Swift",
       "email":"eren123@gmail.com",
       "password":"eren123",
       "slotnumber": 3
@@ -23,6 +28,9 @@
       "name": "Carla",
       "age": "20",
       "city": "Barcelona",
+      "phone":"1357924680",
+      "occupation": "Software Engineer",
+      "song": "Delicate - Taylor Swift",
       "email":"carla123@gmail.com",
       "password":"carla123",
       "slotnumber": 5
@@ -32,6 +40,9 @@
       "name": "Sandra",
       "age": "21",
       "city": "Sevilla",
+      "phone":"1234509876",
+      "occupation": "Sales Agent",
+      "song": "God is a Woman - Ariana Grande",
       "email":"sandra123@gmail.com",
       "password":"sandra123",
       "slotnumber": 2
@@ -40,9 +51,11 @@
       "name": "Veronica",
       "age": "22",
       "city": "Paris",
+      "phone":"1237890456",
+      "occupation": "Doctor",
+      "song": "Dangerous Woman - Ariana Grande",
       "email":"veronica123@gmail.com",
       "password":"veronica123",
       "slotnumber": 1
     }
-  ]
-}
+]
