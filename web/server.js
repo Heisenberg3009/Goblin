@@ -46,6 +46,14 @@ app.use(express.static('public'));
     res.sendFile(`${base}/phistory.html`);
   });
 
+  app.get('/weather', (req, res) => {
+    res.sendFile(`${base}/weather.html`);
+  });
+
+  app.get('/addspots', (req, res) => {
+    res.sendFile(`${base}/adminadd.html`);
+  });
+
   app.get('/lighting', (req, res) => {
     res.sendFile(`${base}/lighting.html`);
   });
@@ -56,6 +64,10 @@ app.use(express.static('public'));
 
   app.get('/sendcommand', (req, res) => {
     res.sendFile(`${base}/send-command.html`);
+  });
+
+  app.get('/payment', (req, res) => {
+    res.sendFile(`${base}/payment.html`);
   });
   
   app.get('/*', (req, res) => {

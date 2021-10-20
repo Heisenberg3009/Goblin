@@ -40,8 +40,7 @@ function mqtt(email)
          const userID = user.id;
          $.post(`${MQTT_URL}/userpreferences`, { userID, song })
           .then(response => {
-          //
-          //location.href = '/dashboard.html';
+          location.href = '/dashboard.html';
          })
         }
       })
@@ -61,7 +60,7 @@ function dashboard (email)
         //jQuery function declared to make $ DOM ready
         //$(document).ready(function(){
         jQuery(function($){
-        $('#dashboardusers tbody').append(`
+        $('#dashboardusers tbody').append(` 
               <tr>
               <td>${user.name}</td>
               <td>${user.age}</td>
@@ -265,6 +264,7 @@ $.get(`${API_URL}/parking`)
         <td>${parking.slotnumber}</td>
         <td>${parking.location.lat}</td>
         <td>${parking.location.lon}</td>
+        <td ><a href="https://www.google.com/maps/dir/?api=1&destination=${spots.s_location_lat+(",")+spots.s_location_long}&travelmode=driving">${("Navigate to  ")+spots.s_name}</a></td>
       </tr>`
     );
   });
