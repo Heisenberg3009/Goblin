@@ -23,11 +23,14 @@ module.exports = function (app) {
         #swagger.parameters['Age'] = {
                description: 'Enter your age'
         }
-        #swagger.parameters['Father Name'] =  {
-             description: 'Enter your father name'
+        #swagger.parameters['City'] =  {
+             description: 'Enter your city'
         }
-        #swagger.parameters['Mother Name'] =  {
-             description: 'Enter your mother name'
+        #swagger.parameters['Phone number'] =  {
+             description: 'Enter your occupation'
+        }
+        #swagger.parameters['Email'] =  {
+             description: 'Enter your occupation'
         }
      */
 
@@ -55,18 +58,18 @@ module.exports = function (app) {
             type: 'string'
      } */
 
-        /* #swagger.parameters['Father Name'] = {
-            description: 'Enter father name if to be updated -',
+        /* #swagger.parameters['City'] = {
+            description: 'Enter city if to be updated -',
             type: 'string'
      } */
 
-       /* #swagger.parameters['Mother Name'] = {
-            description: 'Enter mother name if to be updated -',
+       /* #swagger.parameters['Phone number'] = {
+            description: 'Enter phone number if to be updated -',
             type: 'string'
      } */
         
-        /* #swagger.parameters['Distinction'] = {
-            description: 'Enter distinction if to be updated -',
+        /* #swagger.parameters['Occupation'] = {
+            description: 'Enter occupation if to be updated -',
             type: 'string'
      } */
     
